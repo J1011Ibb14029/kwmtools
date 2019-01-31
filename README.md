@@ -3,13 +3,21 @@ kwmtools
 
 This tool is a set of command line tools to maniplate variant call format file (VCF).
 
+
+
 ##Install & Requirement
+
+
 
 For the tools to run properly, you need to have Python 3.x installed.
 And you must install python modules: sys, re, math, time, scipy, mne, argparse.
 If you carry out the above, you can use this tools as it is.
 
+
+
 ####Description
+
+
 
 ##Overall
 
@@ -22,6 +30,8 @@ You should see a complete list of all the functions in this toolkit.
 The tools, which are all listed further below, are invoked as follows:
 
 python kwmtools.py -T ToolName -OPTION1 [value1] -OPTION2 [value2]...
+
+
 
 ##By functions
 
