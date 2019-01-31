@@ -23,14 +23,14 @@ If you carry out the above, you can use this tools as it is.
 ### Overall
 
 To test that you can run this tools, run the following command in your terminal application.  
-
+```
 python kwmtools.py -h  
-
+```
 You should see a complete list of all the functions in this toolkit.  
 The tools, which are all listed further below, are invoked as follows:  
-
+```
 python kwmtools.py -T ToolName -OPTION1 [value1] -OPTION2 [value2]...  
-
+```
 ### By functions
 
 #### VcfIndexChangeByFai
