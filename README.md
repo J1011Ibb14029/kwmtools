@@ -1,7 +1,7 @@
 # kwmtools
 ----
 
-This tool is a set of command line tools to maniplate variant call format file (VCF).
+This tool is a set of command line tools to manipulate variant call format file (VCF).
 
 
 
