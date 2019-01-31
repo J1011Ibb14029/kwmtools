@@ -5,9 +5,7 @@ import time
 import scipy.stats as stats
 from mne.stats import fdr_correction
 from argparse import ArgumentParser
-from joblib import Parallel, delayed
-import multiprocessing as MP
-from multiprocessing import Pool
+
 
 #vcfファイルのchromosomeのindexを希望のindexへ修正する機能.	
 def VcfIndexChangeByFai(wf,rf,faif):
@@ -632,7 +630,7 @@ def useTool(args):
 	
 def getArgs():
 	parser = ArgumentParser()
-	parser.add_argument('-T', help="Tool name to use.   Tool List(option): VcfIndexChangeByFai(O,I,fai), VcfClassifyUPR(O,I), VcfClassifyMultiAlt(O,I), VcfClassifyInv(O,I,R), VcfClassifyDup(O,I,R), VcfClassifyRef(O,I) playBH(O,I,pv), filterVarscanVariants(O,I,minFreq,minCov,maxCov), filterSV(O,I,minFreq,minCov,maxCov), VcfIntersection(O,I,V), VcfExtractFieldData(O,I,fields), GetFastaSeq(O,R,I)",metavar='ToolName', required=True)
+	parser.add_argument('-T', help="Tool name to use.   Tool List(option): VcfIndexChangeByFai(O,I,fai), VcfClassifyUPR(O,I), VcfClassifyMultiAlt(O,I), VcfClassifyInv(O,I,R), VcfClassifyDup(O,I,R), VcfClassifyRef(O,I) playBH(O,I,pv), filterVarscanVariants(O,I,minVarFreq,minCov,maxCov), filterSV(O,I,minVarFreq,minCov,maxCov), VcfIntersection(O,I,V), VcfExtractFieldData(O,I,fields), GetFastaSeq(O,R,I)",metavar='ToolName', required=True)
 	'''
 	VcfExtractFieldData:extract selected field data of vcf file.
 	VcfIndexChangeByFai:change input vcf file index based on input fasta index file.
@@ -656,7 +654,7 @@ def getArgs():
 	parser.add_argument('--minVarFreq', help='minimum variant frequency. default=0.0', type=float, default=0.0, metavar='Frequency [0-100]')
 	parser.add_argument('--minCov', help='minimum coverage. default=14', type=int, default=14, metavar='Number [0-]')
 	parser.add_argument('--maxCov', help='maximum coverage. default=100', type=int, default=100, metavar='Number [0-]')
-	parser.add_argument('--field', help='Extract fields name (comma determined)',metavar='Field1,Field2,...')
+	parser.add_argument('--field', help='Extract fields name (comma separated)',metavar='Field1,Field2,...')
 	
 	
 	return parser.parse_args()
