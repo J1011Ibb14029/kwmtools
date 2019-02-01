@@ -127,3 +127,10 @@ Usage example:
 ```
 python kwmtools.py -T GetFastaSeq -I [input.bed] -O [output.fa] -R [reference.fa]
 ```
+---
+## Note  
+### Made by  
+Masaki Kawamoto  
+
+### Notification  
+Even if any disadvantage occurs due to this work, we do not take responsibility.    
