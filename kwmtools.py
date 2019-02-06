@@ -517,7 +517,7 @@ def VcfExtractFieldData(wf,rf,fields):
 					#snpEffアノテーションデータ取得
 					for infoD in INFOField:
 						if infoD.startswith('ANN='):
-							AnnotationRecord = infoD[0].split(',')
+							AnnotationRecord = infoD.split(',')
 							for agr in AnnotationRecord:	AnnotationField.append(agr.split('|'))
 					for infoD in INFOField:#LOF,NMDデータ取得
 						if infoD.startswith('LOF='):	LOField = infoD[5:-1].split('|')
